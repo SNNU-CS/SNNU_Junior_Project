@@ -1,11 +1,29 @@
-#include"calendar.hpp"
-int main()
+#include "gtest/gtest.h"
+#include "../src/calendar2.hpp"
+TEST(example, ONE)
 {
-	calendar c(2);
-	c.print_to_crt();
-	calendar b(4);
-	b.print_to_crt();
-	calendar a(8);
+	calendar a(1);
 	a.print_to_crt();
+}
 
+TEST(example, TWO)
+{
+	calendar a(2);
+	a.print_to_crt();
+}
+
+TEST(example, THREE)
+{
+	calendar a(3);
+	a.print_to_crt();
+}
+TEST(example, FOUR)
+{
+	calendar a(4);
+	a.print_to_crt();
+}
+TEST(example, FIVE)
+{
+	calendar a(5);
+	a.print_to_crt();
 }

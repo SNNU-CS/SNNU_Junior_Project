@@ -1,5 +1,6 @@
 
 ## 算法设计与分析作业
+[![Build Status](https://www.travis-ci.org/ZhaoQi99/SNNU_Junior_Project.svg?branch=dev)](https://www.travis-ci.org/ZhaoQi99/SNNU_Junior_Project)
 
 计算机科学与技术(创新实验班)1601班  
 大三上学期必修课  

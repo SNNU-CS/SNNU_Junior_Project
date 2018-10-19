@@ -1,4 +1,4 @@
-sudo: false
+﻿sudo: false
 
 language:
   - cpp
@@ -12,7 +12,7 @@ before_install:
   - pip install --user cpp-coveralls
 
 script:
-  - cd 运动会问题
+  - cd 运动会问题/gtest
   - cmake -H. -Bbuild
   - cd build
   - cmake --build .

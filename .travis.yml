@@ -12,7 +12,7 @@ before_install:
   - pip install --user cpp-coveralls
 
 script:
-  - cd 运动会问题/gtest
+  - cd sports meet/gtest
   - cmake -H. -Bbuild
   - cd build
   - cmake --build .

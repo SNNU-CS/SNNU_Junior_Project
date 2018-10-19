@@ -1,4 +1,4 @@
-/*
+﻿/*
 Problem:比赛日程表
 Author:QiZhao
 Data:2018-09-30
@@ -55,6 +55,7 @@ std::string calendar::return_string()
     int day = n % 2 == 0 ? n - 1 : n;
     for (int i = 1; i <= n; i++)
     {
+        res += "第" + std::to_string(i) +"个人的每天比赛对手分别是: ";
         for (int j = 0; j <= day; j++)
         {
             res += std::to_string( static_cast<int> ( ans[i][j] ) );

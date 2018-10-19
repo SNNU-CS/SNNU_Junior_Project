@@ -1,4 +1,4 @@
-#include "myqtextedit.h"
+﻿#include "myqtextedit.h"
 #include "calendar.hpp"
 #include<Qstring>
 void myQTextEdit::setedit( QLineEdit *edit )
@@ -9,7 +9,7 @@ void myQTextEdit::setedit( QLineEdit *edit )
 void myQTextEdit::mysetvalue()
 {
     calendar ans( edit->text().toInt()); // 计算答案
-    // 设置文本框内容
-    this->setPlainText(QString::fromStdString(ans.return_string()));
+    // 设置文本框内容(utf-8 bom)
+    this->setPlainText( QString::fromLocal8Bit( ans.return_string().c_str() ));
 };
 

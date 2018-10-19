@@ -19,8 +19,9 @@
 //提示文字
 #include<QLabel>
 #include<QTextCodec>
+#include<QValidator>
 #include "myqtextedit.h"
-
+#include<QMessageBox>
 int main(int argc, char *argv[])
 {
 
@@ -41,8 +42,13 @@ int main(int argc, char *argv[])
     block2.setFocusPolicy(Qt::NoFocus);// 设置输出文本框禁止被选中
     block2.setReadOnly(true);//设置输出文本框只读
     block2.setPlainText(QStringLiteral("谢可毅,赵旗\n王文鑫，许渊，孙浩"));//输出名字
+    QMessageBox::information(&w,QString::fromLocal8Bit("提示"),
+                             QString::fromLocal8Bit("谢可毅、赵旗、王文鑫、许渊、孙浩小组作业\n请输入50以内的非负整数"));
     // 设置输入文本框提示语句
     edit.setPlaceholderText(QStringLiteral("请输入人数： "));
+
+    // 限制输入范围为0~50
+    edit.setValidator( new QIntValidator(0,50) );
     // 设置按钮
     QPushButton button(QStringLiteral("确定"));
     // layout 布局控制类，用于控制布局

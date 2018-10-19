@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2018-10-19T10:14:30
+# Project created by QtCreator 2018-10-19T16:59:31
 #
 #-------------------------------------------------
 
@@ -8,7 +8,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = test
+TARGET = qt
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -24,12 +24,9 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
-        main.cpp \
+    main.cpp \
     myqtextedit.cpp
 
 HEADERS += \
-    myqtextedit.h \
-    calendar.hpp
-
-FORMS += \
-        widget.ui
+    calendar.hpp \
+    myqtextedit.h

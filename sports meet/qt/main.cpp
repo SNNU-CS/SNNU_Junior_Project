@@ -1,4 +1,4 @@
-// 应用控件
+﻿// 应用控件
 #include<QApplication>
 // 组件
 #include<QWidget>
@@ -18,16 +18,18 @@
 #include<QGridLayout>
 //提示文字
 #include<QLabel>
+#include<QTextCodec>
 #include "myqtextedit.h"
 
 int main(int argc, char *argv[])
 {
+
     // 建立应用
     QApplication app(argc, argv);
     // 建立组件
     QWidget w;
     // 设置组件名字
-    w.setWindowTitle("算法作业");
+    w.setWindowTitle(QStringLiteral("算法作业"));
     // 运行显示组件
     w.show();
     // 设置输出文本框
@@ -38,11 +40,11 @@ int main(int argc, char *argv[])
     block2.setFixedSize(500,300);// 设置输出文本框大小
     block2.setFocusPolicy(Qt::NoFocus);// 设置输出文本框禁止被选中
     block2.setReadOnly(true);//设置输出文本框只读
-    block2.setPlainText(QString("谢可毅\\n赵旗\n...."));//输出名字
+    block2.setPlainText(QStringLiteral("谢可毅,赵旗\n王文鑫，许渊，孙浩"));//输出名字
     // 设置输入文本框提示语句
-    edit.setPlaceholderText("请输入人数： ");
+    edit.setPlaceholderText(QStringLiteral("请输入人数： "));
     // 设置按钮
-    QPushButton button("确定");
+    QPushButton button(QStringLiteral("确定"));
     // layout 布局控制类，用于控制布局
     QGridLayout layout;
     // 水平缩放倍数

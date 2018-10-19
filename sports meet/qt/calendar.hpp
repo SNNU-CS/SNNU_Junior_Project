@@ -58,7 +58,7 @@ std::string calendar::return_string()
         for (int j = 0; j <= day; j++)
         {
             res += std::to_string( static_cast<int> ( ans[i][j] ) );
-            res +=e " ";
+            res += " ";
         }
         res += '\n';
     }

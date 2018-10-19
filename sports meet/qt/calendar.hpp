@@ -24,7 +24,7 @@ private:
     int n = 0;//数组大小
     int **ans;
 };
-
+// 构造函数 申请内存空间
 calendar::calendar(int nn)
 {
     solve_finished = false;
@@ -35,13 +35,15 @@ calendar::calendar(int nn)
     for (int i = 1; i <= n; i++)
         ans[i][0] = i;
 }
-
+// 析构函数，释放内存
 calendar::~calendar()
 {
     for (int i = 0; i < n + 1; i++)
         delete[] ans[i];
     delete[] ans;
 }
+
+// 返回答案字符串
 std::string calendar::return_string()
 {
     std::string res;
@@ -50,23 +52,19 @@ std::string calendar::return_string()
         solve(1, n);
         solve_finished = true;
     }
-    //cout << "\t\t\t" << n << "人日程表" << endl;
     int day = n % 2 == 0 ? n - 1 : n;
     for (int i = 1; i <= n; i++)
     {
         for (int j = 0; j <= day; j++)
         {
             res += std::to_string( static_cast<int> ( ans[i][j] ) );
-            res += " ";
-            //std::cout << ans[i][j] << " ";
+            res +=e " ";
         }
         res += '\n';
-        //std::cout << std::endl;
     }
-    //std::cout << "--------------" << std::endl;
     return res;
 }
-
+// 输出到标准流 答案
 void calendar::print_to_crt()
 {
     if (!solve_finished)
@@ -86,6 +84,7 @@ void calendar::print_to_crt()
     }
     std::cout << "--------------" << std::endl;
 }
+// 解决问题
 void calendar::solve(int start, int n)
 {
     int temp;

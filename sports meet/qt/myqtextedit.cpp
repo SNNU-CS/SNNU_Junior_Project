@@ -8,8 +8,8 @@ void myQTextEdit::setedit( QLineEdit *edit )
 
 void myQTextEdit::mysetvalue()
 {
-    calendar ans( edit->text().toInt());
-
+    calendar ans( edit->text().toInt()); // 计算答案
+    // 设置文本框内容
     this->setPlainText(QString::fromStdString(ans.return_string()));
 };
 
